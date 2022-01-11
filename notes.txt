@@ -1,0 +1,13 @@
+servlet --> servlet-api.jar 
+
+to create servlet we need to follow three steps 
+
+1) extends HttpServlet
+2) override service method 
+3) map your servlet in web.xml 
+
+
+
+
+get --> query string 
+post --> enc hidden 
