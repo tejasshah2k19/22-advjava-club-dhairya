@@ -11,3 +11,11 @@ to create servlet we need to follow three steps
 
 get --> query string 
 post --> enc hidden 
+
+
+
+task : 
+	create Signup.html -> 
+				submit --> servlet --> servlet will fetch and print all information on console /  browser 
+----------------------------------------------------
+				
