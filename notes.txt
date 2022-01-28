@@ -52,10 +52,27 @@ expression -> <%= %> -> print any java variable
 
 
 
+-------------------------------------------------------------------------
+
+
+bank login.jsp  -->black listed ip 
+whatsapp --> x image send y user --> 25m b 
+			x -> image --> compress -->10 mb  w.server --> y 
+	
+
+filter -> pre process the request 
+
+1) class implements Filter 
+2) override methods - logic 
+3) mapping your filter into web.xml 
 
 
 
+Calc.jsp --> num1 num2 --> submi    CalcFilter [validation] | CalcServlet --> addition 
 
+
+
+-------------------------------------------------------------------------
 
 
 

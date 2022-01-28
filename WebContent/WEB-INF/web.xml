@@ -45,4 +45,21 @@
 		<servlet-name>RegistrationServlet</servlet-name>
 		<url-pattern>/RegistrationServlet</url-pattern>
 	</servlet-mapping>
+
+
+
+
+	<filter>
+		<filter-name>CalcFilter</filter-name>
+		<filter-class>com.filter.CalcFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CalcFilter</filter-name>
+		<url-pattern>/CalcServlet</url-pattern>
+	</filter-mapping>
+
+
+
+
+
 </web-app>
