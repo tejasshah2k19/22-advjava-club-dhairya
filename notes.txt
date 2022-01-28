@@ -74,6 +74,43 @@ Calc.jsp --> num1 num2 --> submi    CalcFilter [validation] | CalcServlet --> ad
 
 -------------------------------------------------------------------------
 
+certificate :-
+
+
+name   xx
+
+faculty  yy 
+
+year    2022 
+
+subject   adv java 
+
+punc   5
+
+gras   5
+
+regu   4
+
+prac   4
+
+task   4
+
+
+	submit 
+	
+	
+	generate certificate 
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
 
 
 
