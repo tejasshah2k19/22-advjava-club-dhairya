@@ -103,10 +103,23 @@ task   4
 	
 	
 	
+-------------------------------------------------------------------------
+1) driver
+2) jdbc api / java.sql 
 	
 	
+mysql --> mysql connector 	
 	
-	
+
+
+create database mydb;
+use mydb;
+create table users (
+	userId integer primary key auto_increment,
+	firstName varchar(30),
+	email varchar(30),
+	password varchar(30)
+);
 
 
 
