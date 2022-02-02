@@ -18,7 +18,7 @@
 	%>
 
 
-	<form action="RegistrationServlet" method="post">
+	<form action="DBRegistrationServlet" method="post">
 
 		FirstName : <input type="text" name="firstName" value="<%=firstNameValue == null?"":firstNameValue %>"  />
 		<%=firstNameError==null?"":firstNameError %>
