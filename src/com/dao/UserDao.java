@@ -24,10 +24,14 @@ public class UserDao {
 
 			// users -> userId,firstName,email,password
 			PreparedStatement pstmt = con
-					.prepareStatement("insert into users (firstName,email,password) values (?,?,?)");
+					.prepareStatement("insert into users (firstName,email,password,userId) values (?,?,?,?)");
 			pstmt.setString(1, user.getFirstName());
 			pstmt.setString(2, user.getEmail());
 			pstmt.setString(3, user.getPassword());
+		
+			int x = (int)(Math.random()*10000);
+					
+			pstmt.setInt(4, x);
 
 			// executeUpdate --> insert delete update
 			// executeQuery --> select
@@ -66,4 +70,18 @@ public class UserDao {
 		return users;
 	}
 
+	public void deleteUser(int userId) {
+
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("delete from users where userId = ? ");
+			pstmt.setInt(1, userId);
+
+			int r = pstmt.executeUpdate();
+			System.out.println(r + " record removed ....");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
