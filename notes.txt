@@ -120,14 +120,41 @@ create table users (
 	email varchar(30),
 	password varchar(30)
 );
+-------------------------------------------------------------------------
+
+
+user information :-	
+		1)	cookie  -- client side -- browser side  
+		2)	session -- server side -- server's memory 
+		
+		
+		otp,password,creditcard,cvv --- 
 
 
 
+session:-
+	session will create when user make first request to the server 
+	session is not created by us it will created by server automatically. 
+	we can ask for session to the server using method. 
+	once we got the session we can use it. 
 
-
-
-
-
+	session scope is available to all the pages in the webapplication
+	every user will get their own session. 
+	
+	all the jsp will get session object automatically you can use directly. 
+	like request object 
+	
+	
+how to destroy session:- 
+	session use server's memory so when user don't want to use it , 
+	we need to destroy it. 
+	 
+	we can destroy session using method or configuration. 
+	1) session.invalidate()  [ logout ] 
+	2) using session time out config in web.xml 
+		<session-config>
+			<session-timeout>10</session-timeout>
+		</session-config>
 
 
 
