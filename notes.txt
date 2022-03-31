@@ -157,6 +157,108 @@ how to destroy session:-
 		</session-config>
 
 
+-------------------------------------------------------
+
+PMIT 
+
+signup
+	email firstname password city 
+login 
+
+suggestion ? 
+ahmedabad sola road pav bhaji ? 
+
+
+
+
+answers ? 
+shivam 
+arpit 
+aanand 
+
+-------------------------------------------------------
+
+servlet life cycle :- 
+
+		LoginServlet.java --> LoginServlet.class 
+server :- 
+		load class[1]
+		create instance[1] 
+		init[1]
+		service[N]
+		destroy[shutdown][1]   
+
+
+
+JSP -->java server pages | java servlet pages 
+
+	your jsp is nothing but it's a servlet 
+	
+	
+		translation  :  .jsp -> .java 
+		compilation	 :	.java -> .class 
+		load class[1]
+		create instance[1] 
+		init[1]
+		service[N]
+		destroy[shutdown][1]   
+	
+A.jsp  --> A.java 
+	<% int x; %>  
+	<%! int y; %> 	
+	<%=x%> 
+	
+	<%!   
+		void add(){
+		
+		}
+	%>	
+	
+	
+	
+	A {
+	
+		int y; 
+		
+		_jspService(req,res){
+			Hi 
+			int x; 
+		}
+ 
+		void add(){
+		
+		}
+	}
+ _ -> override 
+
+
+
+
+
+
+
+----------------------------------------------------------
+
+Header
+	A C B D E F 
+
+
+HEADER
+	xyz 
+	
+	
+HEADER
+	def 
+	
+HEADER
+	klp 
+	
+
+	inclusion
+	1)	static - <%@include file="InclusionHeader.jsp" %>
+	2)	dynamic - 	<jsp:include page="InclusionHeader.jsp"></jsp:include>
+	
+
 
 
 
