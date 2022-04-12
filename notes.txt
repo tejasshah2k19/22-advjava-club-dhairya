@@ -258,6 +258,181 @@ HEADER
 	1)	static - <%@include file="InclusionHeader.jsp" %>
 	2)	dynamic - 	<jsp:include page="InclusionHeader.jsp"></jsp:include>
 	
+-------------------------------------
+
+i need one application in which 1 page is public [ login ] and 
+3 pages are private [ home,order,product].
+
+private pages means user will logged in and then they can access this private pages. 
+
+in my app there is only 1 user who access the app. 
+
+where to store correct email and password ? 
+
+ans : 
+	we can store correct email and password in web.xml , inside LoginServlet 
+	
+	we can read that data using,
+		 servletConfig.getInitParameter("email")
+		 servletConfig.getInitParameter("password")
+
+
+
+question : 
+	In previous example we store correct email and password for LoginServlet,
+	LoginServlet only can read email and password , no other servlet can access that. 
+	how can we store data globally in web.xml so all servlet can acccess. 
+
+ans: 
+	we use servletContext, that is available in entire application 
+	
+	in web.xml 
+	
+	<context-param>
+		<param-name>email</param-name>
+		<param-value>admin@gmail.com</param-value>
+	</context-param>
+	
+	we can access this information using servletContext object. 
+	e.g 
+	
+		in service method 
+		
+			ServletContext context = getServletContext(); 
+			String email = context.getInitParameter("email"); 
+	
+	
+	SerletContext object can be access on jsp , 
+	it is accessible on jsp with name application. 
+	
+	we have 4 scope in j2ee to store data.
+	1) page  [ available to current page]
+	2) request [ can transfer from 1 page to another page ] 
+	3) session [ can have in all the pages but user specific ] 
+	4) application [ can have in all the pages and single object we have so all are share this ] 
+	 
+	
+	
+		
+-------------------------------------
+	how we can track user on website? 
+	e.g : 1)how amazon knows behind the browser who is logged in so when user says add to cart than that 
+		  product is added in correct user's cart? 
+		   
+	ans: using session 
+			when any user hit amazon , amazon server will create session for that user.	
+			
+			e.g 
+					tejas open amazon - amazon server will create session for tejas and store unique id of that session in
+							tejas's browser 
+							
+					dhairya open amazon - amazon server will create session for dhairya and store unique id of that session 
+							in dhairya's browser 
+							
+							
+				So now tejas ask for any thing like , add to cart 
+							tejas's request is submit to the amazon's server with that unique session id 
+							so server get the idea who is behind the request using that unique session id 
+							
+	question: 
+			as we know  that server will create session for us and store unique id in browser , so in browser 
+				where it will store ?
+	ans :	it is inside the cookies, so server will store unique session id inside cookie 
+				with name JSESSIONID 
+				so cookie name is JSESSIONID which has unique session id  
+				
+	
+	question : how to read cookies of browser in servlet ? 
+	
+	
+	
+				
+-------------------------------------
+
+how to create cookie ?
+	to deal with cookie we have Cookie class 
+how to add new cookie in browser? 
+
+how to read all the cookies from browser? 
+
+
+
+pract: 
+
+		create 1 jsp that ask email and firstName to the user
+		once user submit our server will store that information in cookie. 
+	
+		jsp -> AddCookie.jsp 
+		servlet -> AddCookieServlet.java 
+				
+		service()
+		
+			String email = request.getParameter();
+			String firstName = // 
+			
+			Cookie c = new Cookie("email",email);
+			Cookie d = new Cookie("firstName",firstName); 
+			
+			response.addCookie(c);
+			response.addCookie(d);  
+
+			response.sendRedirect("Home.jsp"); 
+			
+	now on Home.jsp add link for ViewAllCookie.jsp 
+	we will print all cookies in this jsp. 
+	
+	in ViewAllCookie.jsp 
+	
+	
+	<%   Cookie c [] = request.getCookies();  %> 
+		
+			<%=c.getName()%> =>  <%=c.getValue()%><br> 
+	
+	<%}%> 
+			
+-------------------------------------
+
+
+JSTL 
+	
+	HTML <a> <b> <i> 
+java standard tag library :-	
+<% int a;  %> 
+
+<%=a%> 
+
+
+<% for %>
+
+<% if %> 
+
+
+core** 
+format
+sql 
+xml 
+
+
+
+1) jstl.jar [ tomcat will not ] 
+2) web-inf/lib
+3) java buildpath 
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
 
 
 
