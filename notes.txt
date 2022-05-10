@@ -417,12 +417,29 @@ xml
 1) jstl.jar [ tomcat will not ] 
 2) web-inf/lib
 3) java buildpath 
+4) jsp => import => use 
+
+
+-------------------------------------
+custom tag 
+	- user 
+	- developer 
+	
+	
+	1) simple tag 
+	2) classic tag 
 
 
 
+steps to implement this :
+1) tag handler class -- logic 
+2) tag lib descriptor -- .tld [ greet , time , .. ]  
+3) map .tld -> web.xml 
+4) use -jsp -> import tld 
 
+GreetTag -> SimpleTag
 
-
+add jar -> jsp-api.jar 
 
 
 
