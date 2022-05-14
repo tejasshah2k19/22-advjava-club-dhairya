@@ -427,8 +427,12 @@ custom tag
 	
 	
 	1) simple tag 
+		[tag with no body no attribute ]  <greet></greet>
+		[tag witn no body with attribute ] <sqr num="2"></sqr>
 	2) classic tag 
-
+		[tag with no body no attribute ]  <greet></greet>
+		[tag witn no body with attribute ] <sqr num="2"></sqr>
+		[tag with body - attribute* ] 
 
 
 steps to implement this :
