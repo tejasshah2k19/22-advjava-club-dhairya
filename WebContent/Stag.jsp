@@ -8,7 +8,9 @@
 <meta charset="ISO-8859-1">
 </head>
 <body>
-	<s:greet></s:greet>
+	<s:greet></s:greet><br>
+	
+	<s:sqr num="5"/>
 
 </body>
 </html>
